@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple 2</title>
+</head>
+<body>
+
+	(Insert the values separated by " ")
+	<br><br>
+	Sum :: 
+	<INPUT TYPE="TEXT" NAME="SUM" id="sumin" oninput="add();">
+	<br>
+	Summation:: 
+	<br>
+	<output id='sout'>0</output>
+	<br><br><br><br>
+	Multiply :: 
+	<INPUT TYPE="TEXT" NAME="MUL" id="mulin" oninput="multiply()">
+	<br>
+	Multiplied::
+	<br>
+	<output id='mout'>0</output>
+	
+</body>
+
+	<script>
+	function add() {
+		var values = document.getElementById('sumin').value;
+		var sep = values.split(" ");
+		var sum = 0;
+		for(i = 0; i < sep.length; i ++)
+		{
+			sum += parseInt(sep[i]);	
+		}
+		
+		if(!isNaN(sum))
+			document.getElementById('sout').innerHTML = sum;
+		
+		
+	}
+	
+	function multiply() {
+		var valuem = document.getElementById('mulin').value;
+		var sepm = valuem.split(" ");
+		var mul = 1;
+		for(i = 0; i < sepm.length; i ++)
+		{
+			mul *= parseInt(sepm[i]);	
+		}
+		
+		if(!isNaN(mul))
+			document.getElementById('mout').innerHTML = mul;
+	}
+</script>
+</html>

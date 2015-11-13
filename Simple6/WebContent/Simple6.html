@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple6</title>
+</head>
+<body>
+
+<p>Display browser engine.</p>
+
+<button onclick="browser();">Try it</button>
+
+<p id="out"></p>
+
+<script>
+function browser() { 
+    document.getElementById("out").innerHTML ="Browser is " + navigator.userAgent;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple 4</title>
+</head>
+<body>
+
+	<br>
+	<br> Insert the String to reverse ::
+	<INPUT TYPE="TEXT" NAME="Str_N" id="string" oninput="reverse();">
+	<br> The reversed String is ::
+	<br>
+	<output id='rev'></output>
+	<output id='cook'></output>
+	<br>
+	<br>
+	<br>
+	<br>
+
+</body>
+
+<script>
+	function reverse() {
+		var str = document.getElementById("string").value;
+		var rev = '';
+		for(i = str.length-1; i >= 0; i--)
+		{
+			rev+=str[i];
+		}
+		
+		document.getElementById("rev").innerHTML = rev;
+
+	}
+	
+</script>
+</html>

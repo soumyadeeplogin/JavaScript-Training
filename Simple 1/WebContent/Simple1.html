@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple 1</title>
+</head>
+<body>
+	Insert the values separated by "," ::
+	<INPUT TYPE="TEXT" NAME="Input" id="in" oninput="submitForm();">
+	<br>
+	<output id='out'>Without Duplicate:: </output>
+</body>
+<script>
+	function submitForm() {
+		var values = document.getElementById('in').value;
+		var sep = values.split(",");
+		var last = sep[sep.length -1];
+		
+		for(i = 0; i < sep.length-1; i++)
+		{
+			if(sep[i] == last)
+			{
+					last='';
+					break;
+			}
+		}
+		
+		document.getElementById('out').innerHTML = document.getElementById('out').innerHTML + " " + last;
+		
+		
+	}
+</script>
+
+</html>
+
+
+
+
